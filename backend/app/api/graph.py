@@ -1,6 +1,6 @@
 """
-图谱相关API路由
-采用项目上下文机制，服务端持久化状态
+Graph-related API routes
+Uses project context mechanism with server-side persistent state
 """
 
 import os
@@ -18,7 +18,7 @@ from ..utils.logger import get_logger
 from ..models.task import TaskManager, TaskStatus
 from ..models.project import ProjectManager, ProjectStatus
 
-# 获取日志器
+# Get logger
 logger = get_logger('mirofish.api')
 
 
