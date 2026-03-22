@@ -674,16 +674,16 @@ const customMaxRounds = ref(40)   // Default recommended: 40 rounds
 
 // Watch stage to update phase
 watch(currentStage, (newStage) => {
-  if (newStage === '生成Agent人设' || newStage === 'generating_profiles') { // legacy backend stage name for 'generating profiles'
+  if (newStage === '生成Agent人设' || newStage === 'generating_profiles') { // backward compat: backend may send Chinese stage name '生成Agent人设'
     phase.value = 1
-  } else if (newStage === '生成模拟配置' || newStage === 'generating_config') { // legacy backend stage name for 'generating config'
+  } else if (newStage === '生成模拟配置' || newStage === 'generating_config') { // backward compat: backend may send Chinese stage name '生成模拟配置'
     phase.value = 2
     // Enter config generation phase, start polling config
     if (!configTimer) {
       addLog('Starting dual-platform simulation config generation...')
       startConfigPolling()
     }
-  } else if (newStage === '准备模拟脚本' || newStage === 'copying_scripts') { // legacy backend stage name for 'copying scripts'
+  } else if (newStage === '准备模拟脚本' || newStage === 'copying_scripts') { // backward compat: backend may send Chinese stage name '准备模拟脚本'
     phase.value = 2 // Still in config phase
   }
 })
