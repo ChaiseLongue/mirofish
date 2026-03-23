@@ -1,6 +1,6 @@
 """
-图谱构建服务
-接口2：使用Zep API构建Standalone Graph
+Graph building service
+API 2: Build a Standalone Graph using the Zep API
 """
 
 import os

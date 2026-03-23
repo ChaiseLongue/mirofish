@@ -1,6 +1,6 @@
 """
-Zep实体读取与过滤服务
-从Zep图谱中读取节点，筛选出符合预定义实体类型的节点
+Zep entity reading and filtering service
+Reads nodes from the Zep graph and filters those matching predefined entity types
 """
 
 import time
